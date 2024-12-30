@@ -5,17 +5,21 @@ import PackageDescription
 
 let package = Package(
     name: "PieChartLibrary",
+    platforms: [
+        .iOS(.v13) // Specify the minimum iOS version
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
+        // Define the library produced by this package.
         .library(
             name: "PieChartLibrary",
-            targets: ["PieChartLibrary"]),
+            targets: ["PieChartLibrary"]
+        ),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        // Define the target for your package.
         .target(
-            name: "PieChartLibrary"),
-
+            name: "PieChartLibrary",
+            path: "Sources" 
+        )
     ]
 )
