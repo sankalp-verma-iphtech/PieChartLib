@@ -6,7 +6,9 @@ import PackageDescription
 let package = Package(
     name: "PieChartLibrary",
     platforms: [
-        .iOS(.v13) // Specify the minimum iOS version
+        .iOS(.v13),       // Minimum iOS version
+        .macOS(.v10_15)   // Minimum macOS version
+        
     ],
     products: [
         // Define the library produced by this package.
@@ -19,7 +21,7 @@ let package = Package(
         // Define the target for your package.
         .target(
             name: "PieChartLibrary",
-            path: "Sources" 
+            path: "Sources"
         )
     ]
 )

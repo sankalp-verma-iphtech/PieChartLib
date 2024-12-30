@@ -7,7 +7,12 @@
 
 
 import SwiftUI
+#if canImport(AppKit) && !targetEnvironment(macCatalyst)
+import AppKit
+#endif
+#if canImport(UIKit)
 import UIKit
+#endif
 @available(iOS 13.0, *)
 
 public struct PieChartRow : View {
